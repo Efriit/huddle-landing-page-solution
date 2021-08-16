@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.main {
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+}
+img {max-width: 100%;}
+
+/* LOGO */
+.logo-container img {
+   position: relative;
+   width: 15%;
+   height: 15%;
+   padding-top: 40px;
+   margin-left: 40px;
+   padding-bottom: 80px;
+}
+/* TEXT & MOCKUPS */
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+.mockups-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+}
+.text-container {
+    color: #ffffff;
+    margin-left: 50px;
+    position: relative;
+    width: 70%;
+    margin-top: 40px;
+}
+h1 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+.text-container p {
+    font-size: 1rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+/* REGISTER BUTTON */
+.btn {
+    border: 1px solid #ffffff;
+    padding: 15px 60px 15px 60px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    border-radius: 40px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    box-shadow: 5px 5px 25px 5px #242424;
+}
+.btn:hover {
+    border: hsl(300, 69%, 71%);
+    background-color: hsl(300, 69%, 71%);
+    color: #ffffff;
+}
+
+
+
+
+
+/* SOCIAL MEDIA */
+
+.socialmedia-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-basis: content;
+    padding-bottom: 40px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.socialmedia-container a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 1em;
+    border-radius: 50%;
+    transition: all .4s;
+    margin: 0 20px;
+}
+.socialmedia-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #003cff;
+    border-radius: 50%;
+    transform: scale(1.1);
+    z-index: -1;
+    transition: all .4s;
+}
+.socialmedia-container a:nth-child(2)::before {
+    background: #1da1f2;
+}
+.socialmedia-container a:nth-child(3)::before {
+    background: #c32aa3;
+}
+.socialmedia-container a:hover::before {
+    transform: translate(10px) scaleX(0.6) scaleY(0.8);
+    filter: blur(10px);
+}
+.socialmedia-container a:hover:nth-child(3) {
+    color: #c32aa3;
+    text-shadow: 0 0 30px #c32aa3;
+    border: #c32aa3;
+}
+.socialmedia-container a:hover:nth-child(1) {
+    color: #003cff;
+    text-shadow: 0 0 30px #003cff;
+    border: #003cff;
+}
+.socialmedia-container a:hover:nth-child(2) {
+    color: #1da1f2;
+    text-shadow: 0 0 30px #1da1f2;
+    border: #1da1f2;
+}
+
+/* FOOTER */
+
+.attribution {
+    padding-top: 15px;
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+    .logo-container img {
+        width: 40%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mockups-container img {
+        width: 85%;
+    }
+    .text-container {
+        text-align: center;
+    }
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .text-container p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+    }
+    .btn {
+        padding: 10px 80px 10px 80px;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    .socialmedia-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+}
